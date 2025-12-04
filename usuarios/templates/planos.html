@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savoir+ | Planos e Assinaturas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+ 
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+ 
+    /* HEADER */
+    header {
+      background: #FF6B00;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+ 
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #FF6B00, #FF9BB0);
+      color: white;
+    }
+    .hero h2 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.3em;
+      max-width: 600px;
+      margin: auto;
+    }
+ 
+    /* PLANS SECTION */
+    .plans-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 40px;
+    }
+ 
+    .plan-card {
+      background: #fff;
+      border: 3px solid #FF6B00;
+      border-radius: 12px;
+      width: 320px;
+      text-align: center;
+      padding: 30px;
+      transition: 0.3s;
+    }
+    .plan-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    }
+ 
+    .plan-card h3 {
+      color: #FF6B00;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+ 
+    .price {
+      font-size: 2.2em;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+ 
+    .price span {
+      font-size: 0.5em;
+    }
+ 
+    ul {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      line-height: 1.8;
+    }
+ 
+    .btn {
+      background: #FF6B00;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #FF9BB0;
+    }
+ 
+    /* COMPARAÇÃO */
+    .comparison {
+      padding: 60px 40px;
+      background: #fff7f0;
+    }
+ 
+    table {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+      border: 1px solid #FFB480;
+      text-align: center;
+    }
+    th {
+      background: #FF6B00;
+      color: white;
+      font-size: 1.1em;
+    }
+ 
+    /* FOOTER */
+    footer {
+      background: #FF6B00;
+      padding: 25px;
+      text-align: center;
+      color: white;
+      margin-top: 40px;
+    }
+ 
+    /* RESPONSIVO */
+    @media (max-width: 700px) {
+      .plans-container {
+        padding: 40px 20px;
+      }
+      .plan-card {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+<header>
+  <h1>Savoir+</h1>
+  <nav>
+    <a href="{% url 'index' %}">Início</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="{% url 'login' %}">Entrar</a>
+  </nav>
+</header>
+ 
+<section class="hero">
+  <h2>Escolha o plano ideal para sua aprovação</h2>
+  <p>Planos completos com aulas, simulados, redação e tudo o que você precisa para alcançar a sua nota dos sonhos.</p>
+</section>
+ 
+<section class="plans-container">
+ 
+  <!-- PLANO 1 -->
+  <div class="plan-card">
+    <h3>Plano Essencial</h3>
+    <p class="price">R$19,90 <span>/ mês</span></p>
+    <ul>
+      <li>✔ Acesso a todas as aulas</li>
+      <li>✔ Material em PDF</li>
+      <li>✔ Exercícios e listas</li>
+      <li>✔ 2 simulados mensais</li>
+      <li>✘ Sem correção de redação</li>
+    </ul>
+    <a href="#" class="btn">Assinar</a>
+  </div>
+ 
+  <!-- PLANO 2 -->
+  <div class="plan-card" style="border-color: #FF0077;">
+    <h3 style="color:#FF0077">Plano Completo</h3>
+    <p class="price" style="color:#FF0077">R$29,90 <span>/ mês</span></p>
+    <ul>
+      <li>✔ Tudo do Essencial</li>
+      <li>✔ Correção de 5 redações/mês</li>
+      <li>✔ Simulados ENEM completos</li>
+      <li>✔ Aulas ao vivo semanais</li>
+      <li>✔ Comunidade de alunos</li>
+    </ul>
+ 
+    <a href="#" class="btn" style="background:#FF0077;">Assinar</a>
+  </div>
+ 
+  <!-- PLANO 3 -->
+  <div class="plan-card" style="border-color:#008BFF;">
+    <h3 style="color:#008BFF">Plano Medicina</h3>
+    <p class="price" style="color:#008BFF">R$59,90 <span>/ mês</span></p>
+    <ul>
+      <li>✔ Tudo do Completo</li>
+      <li>✔ 15 redações/mês</li>
+      <li>✔ Mentoria individual</li>
+      <li>✔ Questões nível Medicina</li>
+      <li>✔ Simulados avançados</li>
+    </ul>
+    <a href="#" class="btn" style="background:#008BFF;">Assinar</a>
+  </div>
+ 
+</section>
+ 
+<section class="comparison">
+  <h2 style="text-align:center; margin-bottom:25px; color:#FF6B00;">Compare os planos</h2>
+ 
+  <table>
+    <tr>
+      <th>Recurso</th>
+      <th>Essencial</th>
+      <th>Completo</th>
+      <th>Medicina</th>
+    </tr>
+ 
+    <tr>
+      <td>Aulas e PDFs</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+    </tr>
+ 
+    <tr>
+      <td>Redação corrigida</td>
+      <td>✘</td>
+      <td>✔ (5/mês)</td>
+      <td>✔ (15/mês)</td>
+    </tr>
+ 
+    <tr>
+      <td>Aulas ao vivo</td>
+      <td>✘</td>
+      <td>✔</td>
+      <td>✔</td>
+    </tr>
+ 
+    <tr>
+      <td>Mentoria</td>
+      <td>✘</td>
+      <td>✘</td>
+      <td>✔ Individual</td>
+    </tr>
+ 
+    <tr>
+      <td>Simulados</td>
+      <td>✔ (básico)</td>
+      <td>✔ (completo)</td>
+      <td>✔ (avançado)</td>
+    </tr>
+  </table>
+</section>
+ 
+<footer>
+  © 2025 Savoir+ | Todos os direitos reservados.
+</footer>
+ 
+</body>
+</html>
+ 

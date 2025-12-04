@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block 'cabecalho' %}
+    
+{% endblock %}
+
+{% block 'conteudo' %}
+
+  <section class="hero">
+    <h2>Prepare-se para o ENEM com o Savoir+</h2>
+    <p>Estude com foco, clareza e resultados — do seu jeito, onde quiser.</p>
+    <a href="#cursos" class="btn">Comece agora</a>
+  </section>
+
+  <section class="section" id="cursos">
+    <h3>Nossos Conteúdos</h3>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <h4>🌍 Humanas</h4>
+          <ul>
+            <li>História do Brasil e Geral</li>
+            <li>Geografia e Atualidades</li>
+            <li>Filosofia e Sociologia</li>
+            <li>Interpretação de Textos</li>
+          </ul>
+        </div>
+        <div class="carousel-item">
+          <h4>🔢 Exatas</h4>
+          <ul>
+            <li>Matemática do ENEM</li>
+            <li>Física aplicada</li>
+            <li>Química simplificada</li>
+            <li>Resolução de questões</li>
+          </ul>
+        </div>
+        <div class="carousel-item">
+          <h4>📚 Aprofundamento</h4>
+          <ul>
+            <li>Redação nota 1000</li>
+            <li>Simulados e correção comentada</li>
+            <li>Mentorias personalizadas</li>
+            <li>Técnicas de estudo e cronogramas</li>
+          </ul>
+        </div>
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="section" id="planos">
+    <h3>Planos e Valores</h3>
+    <div class="plans">
+      <div class="plan">
+        <h4>Plano Básico</h4>
+        <p class="price">R$ 49/mês</p>
+        <ul>
+          <li>Acesso às aulas gravadas</li>
+          <li>Exercícios e simulados</li>
+          <li>Suporte por chat</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h4>Plano Premium</h4>
+        <p class="price">R$ 89/mês</p>
+        <ul>
+          <li>Todas as vantagens do Básico</li>
+          <li>Mentoria semanal</li>
+          <li>Correção de redação</li>
+          <li>Grupo exclusivo no WhatsApp</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h4>Plano Completo</h4>
+        <p class="price">R$ 129/mês</p>
+        <ul>
+          <li>Aulas ao vivo + gravadas</li>
+          <li>Suporte personalizado</li>
+          <li>Mentoria individual</li>
+          <li>Correções ilimitadas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sobre">
+    <h3>Sobre o Savoir+</h3>
+    <p>Somos um cursinho online que acredita em aprendizado leve e eficiente. Nossa missão é ajudar estudantes de todo o Brasil a conquistar sua vaga no ensino superior com aulas objetivas, conteúdo atualizado e acompanhamento de perto.</p>
+  </section>
+
+{% endblock %}
+

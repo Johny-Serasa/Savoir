@@ -1,0 +1,266 @@
+ body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #FF6B00;
+      color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #FF6B00 70%, #FF9BB0 100%);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #FF6B00;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #FF9BB0;
+      color: white;
+    }
+
+    /* SEÇÕES */
+    .section {
+      padding: 60px 40px;
+      text-align: center;
+      
+    }
+
+    .section h3 {
+      color: #FF6B00;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+
+    /* CARROSSEL */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      max-width: 1000px;
+      margin: 0 auto;
+      height: 500px;
+    }
+
+    .carousel-inner {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+
+    .carousel-item {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 30px;
+      background-color: #fff7f0;
+      border-radius: 10px;
+      flex-direction: column;
+      justify-content: center;
+      overflow-y: auto;
+      animation: fadeIn 0.5s ease-in-out;
+
+    }
+
+    .carousel-item.active {
+      display: flex !important;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .carousel-item h4 {
+      color: #FF6B00;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    .carousel-item ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    .carousel-item ul li::before {
+      content: "📘 ";
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #FF6B00;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2em;
+      transition: 0.3s;
+    }
+
+    .carousel-btn:hover {
+      background-color: #FF9BB0;
+    }
+
+    .carousel-btn.prev {
+      left: 10px;
+    }
+    
+    .carousel-btn.next {
+      right: 10px;
+    }
+
+    /* PLANOS */
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .plan {
+      background-color: #fff7f0;
+      border: 2px solid #FF6B00;
+      border-radius: 10px;
+      width: 280px;
+      padding: 30px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .plan h4 {
+      color: #FF6B00;
+      margin-bottom: 10px;
+    }
+
+    .plan p.price {
+      font-size: 1.8em;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+      line-height: 1.8;
+    }
+
+    .plan ul li::before {
+      content: "✅ ";
+      color: #FF6B00;
+    }
+
+    footer {
+      background-color: #FF6B00;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+
+    label {
+      color: #FF6B00;
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    .btn-login {
+      background-color: #FF6B00;
+      color: white !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-login:hover {
+      background-color: #FF9BB0;
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      .hero h2 {
+        font-size: 2em;
+      }
+      .plans {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
